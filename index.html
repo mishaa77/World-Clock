@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World-clock</title>
     <link rel="stylesheet" href="/src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.js"></script>
   </head>
   <body>
     <div class="container">
@@ -15,18 +17,21 @@
         <option value="">Tokyo</option>
         <option value="">New York</option>
       </select>
-
+<div id="london">
       <div class="city-details">
-        <div class="city"><h2>London</h2></div>
-        <div class="time">11:42:55 <small>AM</small></div>
+        <div class="city" id="city" ><h2>London</h2></div>
+        <div class="time"><small></small></div>
       </div>
-      <div class="date">April 7, 2025</div>
+      <div class="date"></div>
+    </div>
 
+    <div id="melbourne">
       <div class="city-details">
-        <div class="city"><h2>Paris</h2></div>
-        <div class="time">11:42:55 <small>AM</small></div>
+        <div class="city"><h2>Melbourne</h2></div>
+        <div class="time"> <small></small></div>
       </div>
-      <div class="date" id="date" >April 7, 2025</div>
+      <div class="date" id="date" ></div>
+    </div>
 
     
 
@@ -37,9 +42,8 @@
       </a>
       and
       <a href="https://aminaj-world-clock.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
+        >hosted on Netlify</a>
     </footer>
-    <script src="src/styles.css"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>

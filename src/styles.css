@@ -27,22 +27,21 @@ select {
 h2 {
   font-size: 28px;
 }
-.city-details {
-  display: flex;
-  justify-content: space-between;
+.city {
+  margin-left: 20px;
   margin-top: 30px;
-  margin-left: 30px;
 }
 .date {
   opacity: 0.7;
-  margin-left: 30px;
+
   border-bottom: 1px dotted gray;
 }
 .time {
   font-size: 32px;
   font-weight: 800;
-  margin-top: 13px;
-  margin-right: 60px;
+  position: relative;
+  left: 350px;
+  top: -70px;
 }
 small {
   font-size: 14px;

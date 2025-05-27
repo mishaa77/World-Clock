@@ -10,7 +10,7 @@ setInterval(function () {
       .tz("Europe/London")
       .format("H:mm:ss  [<small>]A[</small>]");
   }
-}, 1000);
+});
 
 //MELBOURNE
 setInterval(function () {
@@ -31,24 +31,16 @@ function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
-  let cityElement = document.querySelector(".all-cities");
-  cityElement.innerHTML = ` <div id="london"><div class="city-details">
-        <div class="city" id="city" ><h2>${cityName}</h2></div>
-        <div class="time"><small>${cityTime.format(
-          "MMMM Do, YYYY"
-        )}</small></div>
+  let cityElement = document.querySelector(".city");
+  cityElement.innerHTML = `<div >
+          <div class="city-name"><h2>${cityName}</h2></div>
+         <div class="date" id="date">${cityTime.format("MMMM Do, YYYY")}</div>
+         <div class="time">${cityTime.format(
+           "H:mm:ss [<small>]A[</small>]"
+         )}</div>
       </div>
-      <div class="date">${cityTime.format("H:mm:ss")}</div>
-    </div>
-
-    <div id="melbourne">
-      <div class="city-details">
-        <div class="city"><h2>Melbourne</h2></div>
-        <div class="time"><small></small></div>
-      </div>
-      <div class="date" id="date" ></div>
-    </div>
-  </div>`;
+    </div>`;
 }
+
 let citySelect = document.getElementById("cities");
 citySelect.addEventListener("change", updateCity);
